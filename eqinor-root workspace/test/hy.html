@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    .app {
+        background-color: aquamarine;
+        display: grid;
+        grid-template-rows: 100px 1fr 100px;
+        grid-template-columns: 150px 1fr 150px;
+        grid-template-areas: "header header header"
+                            "sidebar content content" 
+                            "footer footer footer";
+      }
+      body > div.item\.one {
+        background-color: blueviolet;
+        grid-row: 1;
+        grid-column: span 3 / -1;
+      }
+      
+      body > div.item\.two{
+        background-color: wheat;
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: span 3;
+      }</style>
+
+<div class="app"></div>
+
+<div class="item.one">vbbfvbvbv</div>
+
+<div class="item.two">vbvbvbv</div>
+
+</body>
+</html>

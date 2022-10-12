@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equinor server</title>
+    <link rel="stylesheet" href="./css/equinor.css" />
+  </head>
+  <body>
+    <header>
+      <div class="headerSection">
+        <span>WITSML Explorer </span>
+        <img src="images/chevron_right.svg" alt="" class="headerArrow" />
+        <span>mywitsmlserver</span>
+        <span class="headerSecondPart">
+          <span class="headerSecondPartOne"
+            ><img src="images/user-icon.png" alt="" class="headerArrow" />
+            scmanager</span
+          >
+          <span class="headerSecondPartOne"
+            ><img src="images/cloud-icon.png" alt="" class="headerArrow" />
+            mywitsmlserver</span
+          >
+        </span>
+      </div>
+    </header>
+    <main>
+      <nav>
+        <span class="searchContainer">
+          <span class="search"
+            ><span class="serachBox"
+              ><img src="images/search.svg" class="logoImg" /><input
+                type="search"
+                placeholder="Search Wells"
+            /></span>
+            <img src="images/filter_alt_active.svg" alt="" class="filter"
+          /></span>
+        </span>
+
+        <div class="wellContainer">
+          <span class="topContainer">
+            <span class="well1">Limit number of well</span
+            ><span class="well2">(0 for no limit)</span
+            ><span class="well3">100</span>
+          </span>
+          <label class="container">
+            <span class="well1"> Show active wells/ wellbores </span>
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">
+            <span class="well1">Show growing logs</span>
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+          <span class="midContainer">
+            <span class="well">Set threshold for time curve</span
+            ><span class="well2">(minutes)</span><span class="well3">60</span>
+          </span>
+          <label class="container">
+            <span class="well1">Hide inactive time Curves</span>
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+          <span class="well4" id="btn">Show more settings</span>
+        </div>
+
+        <div class="advancedContainer" id="box">
+          <span class="well5">Well objects</span>
+
+          <span class="subContainer">
+            <label class="container">
+              <span class="well1"> Well </span>
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1">wellbore</span>
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1">attachment</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1"> bharun </span>
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1">cementjobs</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1">convCore</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1"> customObjcts </span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1">drillReport</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1"> fluidReport </span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1">formationMaker</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1"> log </span>
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1">message</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1"> mnemonicSet </span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1">mudLog</span>
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1"> objectGroup </span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1">opsReport</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1"> pressureTestPlan </span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1">rig</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1"> risk </span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1">sidewallCore</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1"> stimjob </span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1">surveyProgram</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1"> target </span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1">toolErrorModel</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1"> toolErrorTermSet </span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1">trajectory</span>
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1"> tubular </span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <span class="well1">wbGeometry</span>
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+          </span>
+        </div>
+      </nav>
+
+      <article></article>
+    </main>
+    <footer>
+      <span class="well6">no well selected</span>
+    </footer>
+    <script src="javascript/equinor.js"></script>
+  </body>
+</html>

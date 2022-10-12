@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EQUINOR</title>
+  <link rel="stylesheet" href="css/equ.css">
+</head>
+
+<body>
+  <div class="ParentContainer">
+    <header>
+      <span class="headerFirstPart">
+        <span class="witsml">WITSML</span>
+        <span class="witsml">Explorer</span>
+        <img src="image/chevron_right.svg" alt="">
+        <span class="myWitsml">mywitsmlserver</span>
+      </span>
+      <span class="headerSecondPart">
+        <span class="headerSecondPartOne"><img src="image/person.svg" alt=""> scmanager</span>
+        <span class="headerSecondPartOne"><img src="image/Screenshot 2022-10-08 162809.png" > mywitsmlserver</span>
+      </span>
+    </header>
+
+    <main>
+      <nav>
+        <span class="search"><span class="serachBox">
+            <img src="image/search.svg" class="logoImg" alt="">
+            <input type="search" placeholder="Search Wells"></span>
+          <img src="image/sort new.png" alt="" class="filter" id="searchWells"></span>
+
+        <div class="dropDown">
+          <div class="wellContainer" id="wellContents">
+            <span class="topContainer">
+              <span class="wellfont">Limit number of well</span>
+              <span class="welltext">(0 for no limit)</span><span class="welltopic">100</span>
+            </span>
+            <label class="checkboxcontext">
+              <span class="wellfont"> Show active wells/ wellbores </span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkboxcontext">
+              <span class="wellfont">Show growing logs</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <span class="midContainer">
+              <span class="wellcontent">Set threshold for time curve</span><span class="welltext">(minutes)</span>
+              <span class="welltopic">60</span>
+            </span>
+            <label class="checkboxcontext">
+              <span class="wellfont">Hide inactive time Curves</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <span class="wellpoint" id="advancedsettings">Show more settings</span>
+            <label class="checkboxcontext">
+              <span class="wellfont">Hide inactive time Curves</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkboxcontext">
+              <span class="wellfont">Hide inactive time Curves</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkboxcontext">
+              <span class="wellfont">Hide inactive time Curves</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkboxcontext">
+              <span class="wellfont">Hide inactive time Curves</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkboxcontext">
+              <span class="wellfont">Hide inactive time Curves</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="checkboxcontext">
+              <span class="wellfont">Hide inactive time Curves</span>
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="advancedContainer" id="advancedContents">
+            <span class="wellstanza">Well objects</span>
+            <span class="subContainer">
+              <label class="checkboxcontext">
+                <span class="wellfont"> Well </span>
+                <input type="checkbox" checked="checked" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont">wellbore</span>
+                <input type="checkbox" checked="checked" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont">attachment</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont"> bharun </span>
+                <input type="checkbox" checked="checked" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont">cementjobs</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont">convCore</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont"> customObjcts </span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont">drillReport</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont"> fluidReport </span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont">formationMaker</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont"> log </span>
+                <input type="checkbox" checked="checked" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont">message</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont"> mnemonicSet </span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont">mudLog</span>
+                <input type="checkbox" checked="checked" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont"> objectGroup </span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont">opsReport</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont"> pressureTestPlan </span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont">rig</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont"> risk </span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont">sidewallCore</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont"> stimjob </span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont">surveyProgram</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont"> target </span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont">toolErrorModel</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont"> toolErrorTermSet </span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont">trajectory</span>
+                <input type="checkbox" checked="checked" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont"> tubular </span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkboxcontext">
+                <span class="wellfont">wbGeometry</span>
+                <input type="checkbox" checked="checked" />
+                <span class="checkmark"></span>
+              </label>
+            </span>
+          </div>
+          <ul>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+            <li>
+              <span> <img src="image/chevron_right_small.svg" alt=""> 01_AB_2022_T1</span>
+              <span class=" entityActive"> &#11044</span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section class="rightWrapper">
+        <div class="rightWrapperHeader">
+          <span class="setting"> <img src="image/settings.svg" alt="">Properties </span>
+          <span class="setting"><img src="image/delete_to_trash.svg " alt=""> Delete</span>
+          <span class="setting"><img src="image/Screenshot 2022-10-08 161241.png" alt=""> New Wellbore</span>
+          <span class="setting"> <img src="image/well.svg" alt=""> New Well</span>
+          <span class="settingEdit"><img src="image/more_vertical.svg" alt=""> </span>
+        </div>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th><label class="Tablecontainer">
+                    <input type="checkbox" name="checkbox" />
+                    <span class="checkmarkTable"></span>
+                  </label></th>
+                <th> Well Name</th>
+                <th>Field</th>
+                <th> Operator</th>
+                <th> Time Zone</th>
+                <th>Well UID</th>
+                <th>Creation Date</th>
+                <th>Last Modified</th>
+              </tr>
+            </thead>
+            <tbody class="tablebody">
+              <tr>
+                <td><label class="Tablecontainer">
+                    <input type="checkbox" name="checkbox" />
+                    <span class="checkmarkTable"></span>
+                  </label></td>
+                <td>01_AB_2022_T1</td>
+                <td>Terra Nova</td>
+                <td>3 TEC </td>
+                <td>z </td>
+                <td>141_depth</td>
+                <td>13.04.2022</td>
+                <td>13.04.2022</td>
+              </tr>
+              <tr>
+                <td><label class="Tablecontainer">
+                    <input type="checkbox" name="checkbox" />
+                    <span class="checkmarkTable"></span>
+                  </label></td>
+                <td>1158_20_02</td>
+                <td></td>
+                <td></td>
+                <td>z </td>
+                <td>15_2_2022</td>
+                <td>15.02.2022</td>
+                <td>15.02.2022</td>
+              </tr>
+              <tr>
+                <td><label class="Tablecontainer">
+                    <input type="checkbox" name="checkbox" />
+                    <span class="checkmarkTable"></span>
+                  </label></td>
+                <td>16_T20_2021_1</td>
+                <td></td>
+                <td></td>
+                <td>z </td>
+                <td>6fca7d42-083c-4be5-a9ee-c82efb...</td>
+                <td>15.02.2022</td>
+                <td>15.02.2022</td>
+              </tr>
+              <tr>
+                <td><label class="Tablecontainer">
+                    <input type="checkbox" name="checkbox" />
+                    <span class="checkmarkTable"></span>
+                  </label></td>
+                <td>30_BG_10_2</td>
+                <td>ASPG</td>
+                <td>3 TEC ENERGY</td>
+                <td>z </td>
+                <td>16may_growingwell</td>
+                <td>16.05.2022</td>
+                <td>16.05.2022</td>
+              </tr>
+              <tr>
+                <td><label class="Tablecontainer">
+                    <input type="checkbox" name="checkbox" />
+                    <span class="checkmarkTable"></span>
+                  </label></td>
+                <td>6_A_33_22</td>
+                <td>Terra Nova</td>
+                <td>3 TEC </td>
+                <td>z </td>
+                <td>17</td>
+                <td>10.01.2020</td>
+                <td>10.01.2020</td>
+              </tr>
+              <tr>
+                <td><label class="Tablecontainer">
+                    <input type="checkbox" name="checkbox" />
+                    <span class="checkmarkTable"></span>
+                  </label></td>
+                <td>AD_2_Y_25</td>
+                <td>Terra Nova</td>
+                <td>3 TEC </td>
+                <td>z </td>
+                <td>1719</td>
+                <td>09.01.2020</td>
+                <td>09.01.2020</td>
+              </tr>
+              <tr>
+                <td><label class="Tablecontainer">
+                    <input type="checkbox" name="checkbox" />
+                    <span class="checkmarkTable"></span>
+                  </label></td>
+                <td>AE_A4_20</td>
+                <td></td>
+                <td></td>
+                <td>z </td>
+                <td>17A</td>
+                <td>05.02.2020</td>
+                <td>05.02.2020</td>
+              </tr>
+              <tr>
+                <td><label class="Tablecontainer">
+                    <input type="checkbox" name="checkbox" />
+                    <span class="checkmarkTable"></span>
+                  </label></td>
+                <td>BB-1-2022</td>
+                <td>ASPG</td>
+                <td>ENERGY </td>
+                <td>z </td>
+                <td>17may_growingwell</td>
+                <td>16.06.2022</td>
+                <td>16.06.2022</td>
+              </tr>
+              <tr>
+                <td><label class="Tablecontainer">
+                    <input type="checkbox" name="checkbox" />
+                    <span class="checkmarkTable"></span>
+                  </label></td>
+                <td>BS_2022_9</td>
+                <td></td>
+                <td></td>
+                <td>z </td>
+                <td>1818</td>
+                <td>14.01.2020</td>
+                <td>14.01.2020</td>
+              </tr>
+              <tr>
+                <td><label class="Tablecontainer">
+                    <input type="checkbox" name="checkbox" />
+                    <span class="checkmarkTable"></span>
+                  </label></td>
+                <td>C-2-YK</td>
+                <td>Terra Nova</td>
+                <td>3 TEC </td>
+                <td>z </td>
+                <td>18_04</td>
+                <td>18.04.2022</td>
+                <td>18.04.2022</td>
+              </tr>
+              <tr>
+                <td><label class="Tablecontainer">
+                    <input type="checkbox" name="checkbox" />
+                    <span class="checkmarkTable"></span>
+                  </label></td>
+                <td>CE-10-2021</td>
+                <td></td>
+                <td> </td>
+                <td></td>
+                <td>4d1c0d23-f022-4855-9b96-54464... </td>
+                <td>01.02.2022</td>
+                <td>01.02.2022</td>
+              </tr>
+              <tr>
+                <td><label class="Tablecontainer">
+                    <input type="checkbox" name="checkbox" />
+                    <span class="checkmarkTable"></span>
+                  </label></td>
+                <td>C-2-YK</td>
+                <td>Terra Nova</td>
+                <td>3 TEC </td>
+                <td>z </td>
+                <td>18_04</td>
+                <td>18.04.2022</td>
+                <td>18.04.2022</td>
+              </tr>
+              <tr>
+                <td><label class="Tablecontainer">
+                    <input type="checkbox" name="checkbox" />
+                    <span class="checkmarkTable"></span>
+                  </label></td>
+                <td>D_T10_2001</td>
+                <td>Tor II</td>
+                <td>Halliburton </td>
+                <td>+02:00 </td>
+                <td>c0a23426-b6fc-493e-b59c-592a4...</td>
+                <td>04.11.2020</td>
+                <td>12.11.2020</td>
+              </tr>
+              <tr>
+                <td><label class="Tablecontainer">
+                    <input type="checkbox" name="checkbox" />
+                    <span class="checkmarkTable"></span>
+                  </label></td>
+                <td>AD_2_Y_25</td>
+                <td>Terra Nova</td>
+                <td>3 TEC </td>
+                <td>z </td>
+                <td>1719</td>
+                <td>09.01.2020</td>
+                <td>09.01.2020</td>
+              </tr>
+              <tr>
+                <td><label class="Tablecontainer">
+                    <input type="checkbox" name="checkbox" />
+                    <span class="checkmarkTable"></span>
+                  </label></td>
+                <td>AD_2_Y_25</td>
+                <td>Terra Nova</td>
+                <td>3 TEC </td>
+                <td>z </td>
+                <td>1719</td>
+                <td>09.01.2020</td>
+                <td>09.01.2020</td>
+              </tr>
+              <tr>
+                <td><label class="Tablecontainer">
+                    <input type="checkbox" name="checkbox" />
+                    <span class="checkmarkTable"></span>
+                  </label></td>
+                <td>AD_2_Y_25</td>
+                <td>Terra Nova</td>
+                <td>3 TEC </td>
+                <td>z </td>
+                <td>1719</td>
+                <td>09.01.2020</td>
+                <td>09.01.2020</td>
+              </tr>
+              <tr>
+                <td><label class="Tablecontainer">
+                    <input type="checkbox" name="checkbox" />
+                    <span class="checkmarkTable"></span>
+                  </label></td>
+                <td>AD_2_Y_25</td>
+                <td>Terra Nova</td>
+                <td>3 TEC </td>
+                <td>z </td>
+                <td>1719</td>
+                <td>09.01.2020</td>
+                <td>09.01.2020</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span><i>No Well Selected </i> </span>
+    </footer>
+  </div>
+  <script src="javascript/equ.js"></script>
+</body>
+
+</html>

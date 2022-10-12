@@ -1,0 +1,626 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+body {
+  user-select: none;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ParentContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  
+}
+
+:root {
+  --text-color: #235978;
+  --img-log-color: hsl(0deg 0% 97%);
+  --menu-font-color: #000000;
+  --para-color: #666666;
+  --nav-color: #999999;
+  --border-color: #aaaaaa;
+  --title-icon-color: #eeeeee;
+  --border-color: #f4f4f4;
+  --deactive-color: #dcdcdc;
+  --background-color: #ffffff;
+  --box-color: #ccc;
+  --border-bottom-list-color: hsl(0deg 0% 93%);
+  --footer-table-color: #f8f8f8;
+  --checkmark-border-color: #acacac;
+  --footer-top-color: hsl(0deg 0% 97%);
+  --entity-active-color: hsl(120deg 100% 25%);
+  --entity-inactive-color: hsl(0deg 0% 97%);
+  --box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 1% 5% 1% 6%;
+  color: var(--text-color);
+}
+
+
+
+header {
+  color: var(--text-color);
+  font-size: 16px;
+  display: flex;
+  padding: 10px 21px 10px 25px;
+  align-items: center;
+  box-shadow: 2px 1px 2px var(--box-color);
+  justify-content: space-between;
+}
+
+
+.headerFirstPart {
+  align-items: center;
+  display: flex;
+}
+
+.headerFirstPart>span:nth-child(2) {
+  padding: 0 0 0 4px;
+}
+
+
+
+.headerSecondPartOne>img {
+  height: 19px;
+}
+
+.entityActive {
+  color: var(--entity-active-color);
+  font-size: 11px;
+  padding: 0px 10px 0px 0px;
+}
+
+.entityDactive {
+  color: var(--entity-inactive-color);
+  font-size: 11px;
+  padding: 0px 10px 0px 0px;
+}
+
+li {
+
+  border-bottom: 1px solid var(--box-color);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+nav {
+  box-shadow: 2px 0 3px -2px var(--box-color);
+  width: 30%;
+}
+
+nav>ul>li>span.entityActive {
+  padding: 0px 10px 0px 0px;
+}
+
+nav>ul>li>img {
+  height: 10px;
+  width: 12px;
+  padding: 4px 5px 1px 10px;
+}
+
+.dropDown {
+  height: 700px;
+  overflow: scroll;
+}
+
+.dropDown::-webkit-scrollbar {
+  width: 16px;
+}
+
+.dropDown::-webkit-scrollbar-thumb {
+  background: var(--deactive-color);
+  background-clip: padding-box;
+  border: 4px solid transparent;
+  border-radius: 8px;
+  box-shadow: none;
+  min-height: 50px;
+}
+
+.dropDown::-webkit-scrollbar-track,
+.dropDown::-webkit-scrollbar-track:hover {
+  background: none;
+  border: none;
+}
+
+.witsml {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.myWitsml {
+  font-family: inherit;
+
+  font-style: normal;
+
+  font-weight: 600;
+
+  font-size: 13px;
+
+  color: var(--text-color);
+}
+
+
+
+footer {
+  background-color: var(--footer-top-color);
+  font-size: 13px;
+  padding: 10px 10px 10px 23px;
+  color: var(--box-color);
+}
+
+main {
+  display: flex;
+  overflow: hidden;
+}
+
+.logoImg {
+  background-color: var(--footer-top-color);
+  padding: 4px 3px 4px 5px;
+  height: 27px;
+  width: 22px;
+}
+
+img {
+  height: 15px;
+  width: 20px;
+
+}
+
+.serachBox {
+  display: flex;
+
+}
+
+input[type="search"] {
+  width: 100%;
+  background-color: var(--footer-table-color);
+  outline: none;
+  border: none;
+  height: 27px;
+  font-size: 14px;
+}
+
+.search {
+  display: flex;
+
+  justify-items: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 8% 1% 6%;
+  box-shadow: 0px 1px 1px var(--box-color);
+}
+
+.rightWrapper {
+  width: 70%;
+  padding: 1px 5px 1px 20px;
+}
+
+.rightWrapperHeader {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 10px 20px 10px 1px;
+  font-size: 14px;
+  color: var(--box-color);
+  font-family: inherit;
+}
+
+.headerFirstPart>img {
+  padding: 1px 0px 1px 5px;
+  height: 18px;
+}
+
+.setting>img {
+  height: 19px;
+  width: 19px;
+}
+
+.setting {
+  display: flex;
+  align-items: center;
+  background-color: var(--footer-top-color);
+  padding: 8px 10px 8px 10px;
+  gap: 5px;
+}
+
+.settingEdit {
+  background-color: var(--footer-top-color);
+  align-items: center;
+  padding: 7px;
+}
+
+table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  color: var(--text-color);
+  background-color: var(--background-color);
+
+}
+
+td,
+th {
+  text-align: left;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+tr:nth-child(odd) {
+  background-color: var(--footer-top-color);
+}
+
+.wellContainer {
+  background-color: var(--footer-table-color);
+  padding: 1%;
+  box-shadow: var(--box-shadow);
+  width: 30%;
+  height: 12rem;
+  position: absolute;
+  display: none;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--footer-table-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--box-color);
+  transition: all 0.3s ease;
+}
+
+.topContainer {
+  display: flex;
+  gap: 1%;
+  padding: 1% 1% 2% 5%;
+  justify-content: space-around;
+  border-bottom: 2px solid #e8e8e8;
+  align-items: flex-end;
+}
+
+.wellcontent {
+  font-size: 12px;
+  color: var(--para-color);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.wellfont {
+  font-size: 14px;
+  color: var(--text-color);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.welltext {
+  color: var(--para-color);
+  flex-grow: 1;
+  font-size: 11px;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.welltopic {
+  border-bottom: 1px solid var(--menu-font-color);
+  padding: 0% 9% 0% 2%;
+  cursor: pointer;
+}
+
+.wellpoint {
+  color: var(--text-color);
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 1% 1% 1% 5%;
+}
+
+.wellstanza {
+  font-size: 13px;
+  padding-left: 19px;
+  color: var(--text-color);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+body>main>nav>div.wellContainer>label:nth-child(3)>span:nth-child(1) {
+  display: block;
+}
+
+.midContainer {
+  display: flex;
+  gap: 1%;
+  padding: 0% 1% 0% 44px;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.checkboxcontext {
+  display: inherit;
+  position: relative;
+  padding-left: 47px;
+  cursor: pointer;
+  font-size: 14px;
+  padding-bottom: 1%;
+  padding-top: 5px;
+}
+
+.checkboxcontext input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 8px;
+  left: 18px;
+  height: 11px;
+  width: 11px;
+  border: 1px solid var(--checkmark-border-color);
+}
+
+.checkboxcontext input:checked~.checkmark {
+  background-color: var(--text-color);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+
+
+.Tablecontainer {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  font-size: 14px;
+  padding-bottom: 1%;
+  padding-top: 5px;
+}
+
+.Tablecontainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmarkTable {
+  position: absolute;
+  top: -3px;
+  left: 1px;
+  height: 11px;
+  width: 11px;
+  border: 1px solid var(--checkmark-border-color);
+}
+
+.Tablecontainer input:checked~.checkmarkTable {
+  background-color: var(--text-color);
+}
+
+.checkmarkTable:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.Tablecontainer input:checked~.checkmarkTable:after {
+  display: block;
+}
+
+.Tablecontainer .checkmarkTable:after {
+  left: 2px;
+  top: 0px;
+width: 3px;
+    height: 6px;
+  border: solid var(--background-color);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+.checkboxcontext input:checked~.checkmark:after {
+  display: block;
+}
+
+.checkboxcontext .checkmark:after {
+  left: 2px;
+  top: 0px;
+  width: 3px;
+  height: 6px;
+  border: solid var(--background-color);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.advancedContainer {
+  height: 58%;
+  display: none;
+  background-color: var(--footer-table-color);
+  padding:1%;
+  position: absolute;
+  width: 30%;
+  top: 37%;
+}
+
+.subContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 1%;
+}
+
+@media (width: 1440px) {
+  .wellContainer {
+    background-color: var(--footer-table-color);
+    padding: 0% 0% 0% 1%;
+    box-shadow: var(--box-shadow);
+    height: 10.2rem;
+    position: absolute;
+    display: none;
+  }
+
+  .checkboxcontext {
+    display: inherit;
+    position: relative;
+    padding-left: 47px;
+    cursor: pointer;
+    font-size: 14px;
+    padding-bottom: 2px;
+    padding-top: 1px;
+  }
+
+  .advancedContainer {
+    height: 58%;
+    display: none;
+    background-color: var(--footer-table-color);
+    padding:1%;
+    position: absolute;
+    top: 37.3%;
+  }
+}
+
+
+@media (width: 1024px) {
+  .wellfont {
+    font-size: 10px;
+    color: var(--text-color);
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .advancedContainer {
+    height: 58%;
+    display: none;
+    background-color: var(--footer-table-color);
+    padding:1%;
+    position: absolute;
+    width: 30%;
+    top: 38%;
+  }
+
+  .wellContainer {
+    background-color: var(--footer-table-color);
+    padding: 0% 0% 0% 1%;
+    box-shadow: var(--box-shadow);
+    width: 30%;
+    height: 10.5rem;
+    position: absolute;
+    display: none;
+    overflow-y: scroll;
+  }
+
+}
+
+@media (min-width: 425px) and (max-width: 1020px) {
+  ul {
+    margin: 0;
+    list-style: none;
+    padding: 1% 5% 1% 6%;
+    color: var(--text-color);
+    width: 16rem;
+  }
+
+  .wellContainer {
+    background-color: var(--footer-table-color);
+    padding: 0% 0% 0% 1%;
+    box-shadow: var(--box-shadow);
+    height: 10.5rem;
+    position: absolute;
+    display: none;
+    overflow-y: scroll;
+  }
+
+  .subContainer {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    padding-top: 1%;
+  }
+
+  .advancedContainer {
+    height: 58%;
+    display: none;
+    background-color: var(--footer-table-color);
+    position: absolute;
+    top: 38%;
+  }
+
+  .wellfont {
+    font-size: 10px;
+    color: var(--text-color);
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .checkboxcontext {
+    display: inherit;
+    position: relative;
+    padding-left: 27px;
+    cursor: pointer;
+    font-size: 14px;
+    padding-bottom: 1%;
+    padding-top: 5px;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 7px;
+    left: 15px;
+    height: 10px;
+    width: 10px;
+    border: 1px solid var(--checkmark-border-color);
+  }
+
+  tbody {
+    overflow-y: scroll;
+  }
+
+  .table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+
+}
